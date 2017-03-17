@@ -1,18 +1,18 @@
-#TcpProtect#
+# TcpProtect
 
-##Description##
+## Description#
 
 This is a small ruby class which acts as a wrapper of TCP connection between a client and server to ensure the security using Key Exchange and Encryption.
 
 **NOTE**: The HTTP (WebAPI) version can be found at: https://github.com/levisre/KeyExchange.
 
-##Requirement##
+## Requirement
 
 - Ruby >= `2.3.0`
 
 - `openssl`
 
-##How it works##
+## How it works
 
 - The client starts connection by generating its own keypair using ECDH and sends the public key to a specified server.
 
@@ -26,7 +26,7 @@ This is a small ruby class which acts as a wrapper of TCP connection between a c
 
 - Any newly created connection will perform all steps above again.
 
-##How to use##
+## How to use
 
 Run commands:
 
@@ -67,7 +67,7 @@ Network capture
 
 ![Network captured](encrypt_packet.png)
 
-##File contents##
+## File contents
 
 `tcpprotect.rb`: Contains the main class `TCPProtect` which is used by both client and server.
 
