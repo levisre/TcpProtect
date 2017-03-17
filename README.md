@@ -4,12 +4,12 @@
 
 This is a small ruby class which acts as a wrapper of TCP connection between a client and server to ensure the security using Key Exchange and Encryption.
 
-NOTE: The HTTP (WebAPI) version can be found at: https://guthub.com/levisre/KeyExchange.
+**NOTE**: The HTTP (WebAPI) version can be found at: https://github.com/levisre/KeyExchange.
 
 ##Requirement##
 
 - Ruby >= `2.3.0`
--
+
 - `openssl`
 
 ##How it works##
