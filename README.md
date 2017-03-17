@@ -26,6 +26,47 @@ This is a small ruby class which acts as a wrapper of TCP connection between a c
 
 - Any newly created connection will perform all steps above again.
 
+##How to use##
+
+Run commands:
+
+```
+$ bundle install
+$ ruby server.rb
+$ ruby client.rb
+```
+
+Output:
+
+```
+server.rb
+
+Server started on port 2001
+New client: #<TCPSocket:0x00000000e81ca0>
+[2017-03-17 10:28:53 +0700] 127.0.0.1: Handshaking finished
+[2017-03-17 10:29:09 +0700] 127.0.0.1: This is a test
+[2017-03-17 10:29:31 +0700] 127.0.0.1: Are we secured?
+[2017-03-17 10:29:39 +0700] 127.0.0.1: Okay, fine
+Connection Closed #<TCPSocket:0x00000000e81ca0>
+
+```
+
+```
+client.rb
+
+You sent: Handshaking finished
+Msg>This is a test
+You sent: This is a test
+Msg>Are we secured?
+You sent: Are we secured?
+Msg>Okay, fine
+You sent: Okay, fine
+Msg>^CClosing connection
+```
+Network capture
+
+![Network captured](encrypt_packet.png)
+
 ##File contents##
 
 `tcpprotect.rb`: Contains the main class `TCPProtect` which is used by both client and server.
